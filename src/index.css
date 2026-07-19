@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "./styles/variables.css";
+@import "./styles/globals.css";
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
