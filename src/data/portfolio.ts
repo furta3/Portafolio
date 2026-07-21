@@ -1,4 +1,6 @@
 import placeholder from '@/assets/images/placeholder-black.jpg'
+import incose_landing from '@/assets/images/incose-landing.png'
+import escanered from '@/assets/images/EscanerED.jpeg'
 import type { PortfolioItem } from '@/types'
 
 export const portfolio: PortfolioItem[] = [
@@ -14,17 +16,17 @@ export const portfolio: PortfolioItem[] = [
     id: 'proyecto-2',
     title: 'Landing de Producto',
     category: 'Marketing',
-    description: 'Página de lanzamiento con animaciones y foco en conversión.',
-    image: placeholder,
-    tags: ['Vite', 'Framer Motion'],
+    description: 'Página de lanzamiento, con información del producto, y medios de contacto.',
+    image: incose_landing,
+    tags: ['Vite', 'React', 'TypeScript', 'Tailwind'],
   },
   {
     id: 'proyecto-3',
-    title: 'Portfolio Creativo',
+    title: 'App android para imprimir etiquetas',
     category: 'Portfolio',
-    description: 'Sitio personal para un estudio de diseño con galería interactiva.',
-    image: placeholder,
-    tags: ['React', 'Swiper'],
+    description: 'Aplicación para Android que permite imprimir etiquetas desde el dispositivo móvil, conectándose a una impresora térmica mediante Bluetooth.',
+    image: escanered,
+    tags: ['Android', 'Swiper', 'Bluetooth'],
   },
   {
     id: 'proyecto-4',

@@ -1,32 +1,34 @@
-import placeholder from '@/assets/images/placeholder-black.jpg'
+import alemao_logo from '@/assets/images/alemao_logo.jpeg'
+import complet_logo from '@/assets/images/complet_logo.jpeg'
+import Incose_logo from '@/assets/images/Incose_logo.jpeg'
 import type { Testimonial } from '@/types'
 
 export const testimonials: Testimonial[] = [
   {
     id: 'testimonio-1',
-    name: 'Lucía Fernández',
-    role: 'Fundadora',
-    company: 'Estudio Nimbo',
-    avatar: placeholder,
+    name: 'Flavio Marrero',
+    role: 'Dueño',
+    company: 'Complet SAS',
+    avatar: complet_logo,
     quote:
       'Superó todas mis expectativas. El sitio quedó rápido, moderno y las animaciones le dan un toque profesional increíble.',
   },
   {
     id: 'testimonio-2',
-    name: 'Martín Suárez',
+    name: 'José Sosa',
     role: 'CEO',
-    company: 'Suárez Digital',
-    avatar: placeholder,
+    company: 'Incose SAS',
+    avatar: Incose_logo,
     quote:
       'Excelente comunicación durante todo el proyecto. Entendió exactamente lo que necesitaba mi negocio.',
   },
   {
     id: 'testimonio-3',
-    name: 'Carla Gómez',
-    role: 'Marketing Manager',
-    company: 'Bright Studio',
-    avatar: placeholder,
+    name: 'Luciano Alemão',
+    role: 'Dueño',
+    company: 'Alemão Expedições',
+    avatar: alemao_logo,
     quote:
-      'La landing page que nos hizo aumentó nuestras conversiones en el primer mes. Totalmente recomendado.',
+      'A landing page que ele fez aumentou nossas conversões no primeiro mês. Totalmente recomendado.',
   },
 ]
