@@ -1,5 +1,5 @@
 import placeholder from '@/assets/images/placeholder-black.jpg'
-import incose_landing from '@/assets/images/incose-landing.png'
+import incose_landing from '@/assets/images/incose_landing.png'
 import escanered from '@/assets/images/EscanerED.jpeg'
 import type { PortfolioItem } from '@/types'
 
