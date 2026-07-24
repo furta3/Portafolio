@@ -71,7 +71,7 @@ export function Navbar() {
 
         <a
           href="#contacto"
-          className="hidden rounded-full bg-linear-to-r from-accent to-accent-2 px-5 py-2.5 text-sm font-medium text-white transition-transform hover:-translate-y-0.5 lg:inline-flex"
+          className="cta-gradient-text hidden rounded-full bg-linear-to-r from-accent to-accent-2 px-5 py-2.5 text-sm font-medium transition-transform hover:-translate-y-0.5 lg:inline-flex"
         >
           Trabajemos juntos
         </a>

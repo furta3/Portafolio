@@ -20,7 +20,7 @@ export function CTA() {
               <Button
                 variant="secondary"
                 size="lg"
-                className="bg-white text-fg-strong hover:-translate-y-0.5"
+                className="bg-white text-on-light hover:-translate-y-0.5"
                 onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Escribime ahora

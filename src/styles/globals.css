@@ -2,6 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -95,6 +104,22 @@ code {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.cta-gradient-text {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.text-on-light {
+  color: #08060d;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cta-gradient-text {
+    color: #170a26;
+    text-shadow: none;
+  }
 }
 
 .section-padding {

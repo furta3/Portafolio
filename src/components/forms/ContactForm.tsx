@@ -3,7 +3,9 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { toast } from 'sonner'
 import { Send } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 import { Button } from '@/components/buttons/Button'
+import { EMAILJS_CONFIG, SITE_CONFIG } from '@/constants/config'
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Ingresá tu nombre completo'),
@@ -23,10 +25,35 @@ export function ContactForm() {
     resolver: zodResolver(contactSchema),
   })
 
-  async function onSubmit() {
-    await new Promise((resolve) => setTimeout(resolve, 900))
-    toast.success('¡Mensaje enviado! Te responderé a la brevedad.')
-    reset()
+  async function onSubmit(data: ContactFormValues) {
+    try {
+      const emailServiceId = EMAILJS_CONFIG.serviceId
+      const emailTemplateId = EMAILJS_CONFIG.templateId
+      const emailPublicKey = EMAILJS_CONFIG.publicKey
+
+      if (!emailServiceId || !emailTemplateId || !emailPublicKey) {
+        throw new Error('Falta la configuración de EmailJS')
+      }
+
+      await emailjs.send(
+        emailServiceId,
+        emailTemplateId,
+        {
+          to_email: SITE_CONFIG.email,
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        },
+        {
+          publicKey: emailPublicKey,
+        }
+      )
+
+      toast.success('¡Mensaje enviado! Te responderé a la brevedad.')
+      reset()
+    } catch (error) {
+      toast.error('Error al enviar el mensaje. Intenta de nuevo.')
+    }
   }
 
   return (

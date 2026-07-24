@@ -6,3 +6,9 @@ export const SITE_CONFIG = {
   location: 'Uruguay · Remoto',
   logoText: 'Dev',
 }
+
+export const EMAILJS_CONFIG = {
+  serviceId: 'contact_gmail_portafolio',
+  templateId: 'template_afo4qdv',
+  publicKey: 'w7OKSHUUB2Qi6MHia',
+}
